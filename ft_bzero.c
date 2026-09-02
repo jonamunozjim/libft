@@ -1,4 +1,4 @@
-void ft_bzero(void s[n], size_t n)
+void	ft_bzero(void s[n], size_t n)
 {
 	int	i;
 
@@ -9,4 +9,3 @@ void ft_bzero(void s[n], size_t n)
 		i++;
 	}
 }
-

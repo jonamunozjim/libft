@@ -1,4 +1,4 @@
-void *ft_memset(void s[n], int c, size_t n)
+void	*ft_memset(void s[n], int c, size_t n)
 {
 	int	i;
 
@@ -9,4 +9,3 @@ void *ft_memset(void s[n], int c, size_t n)
 		i++;
 	}
 }
-
