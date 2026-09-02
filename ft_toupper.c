@@ -1,5 +1,5 @@
-#include <stdio.h>
-#include <ctype.h>
+//#include <stdio.h>
+//#include <ctype.h>
 
 int	ft_toupper(int c)
 {
@@ -8,7 +8,7 @@ int	ft_toupper(int c)
 	else
 		return (c);
 }
-
+/*
 int	main(int ac, char **av)
 {
 	if (ac != 2)
@@ -16,4 +16,4 @@ int	main(int ac, char **av)
 	printf ("toupper: %c\n", toupper (av[1][0]));
 	printf ("ft_toupper: %c\n", ft_toupper (av[1][0]));
 	return (0);
-}
+}*/
