@@ -1,36 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jona <jmunoz-j@student.42malaga.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/17 10:50:36 by jona              #+#    #+#             */
-/*   Updated: 2026/09/18 08:39:54 by jona             ###   ########.fr       */
+/*   Created: 2026/09/18 08:41:18 by jona              #+#    #+#             */
+/*   Updated: 2026/09/18 09:02:12 by jona             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 
-void	*ft_memcpy(void *dest, const void *src, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned int	i;
+	char	temp[n];
 
 	i = 0;
-	while (i < n)
+
+	while (i < n+1)
 	{
-		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
+		temp[i] = ((unsigned char *)src)[i];
+		i++;
+	}
+	i = 0;
+	while (i < n+1)
+	{
+		((unsigned char *)dest)[i] = temp[i];
 		i++;
 	}
 	return (dest);
 }
-/*
+
 int	main(void)
 {
-	char	src[] = "Hola";
-	char	dest[] = "que tal";
-
-	ft_memcpy (dest, src, 3);
-	printf("src: %s\ndest: %s", src, dest);
+	char	str[] = "Hola";
+	char	out[] = "A";
+	printf ("%s\n", str);
+	ft_memmove (out, str, 4);
+	printf("str: %s\ndest: %s\n", str, out);
 	return (0);
-}*/
+}
