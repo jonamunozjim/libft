@@ -1,38 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jona <jmunoz-j@student.42malaga.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/17 08:43:06 by jona              #+#    #+#             */
-/*   Updated: 2026/09/17 10:48:32 by jona             ###   ########.fr       */
+/*   Created: 2026/09/17 10:50:36 by jona              #+#    #+#             */
+/*   Updated: 2026/09/17 11:12:24 by jona             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
+#include <stdio.h>
 
-void	*ft_memset(void *s, int c, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned int	i;
 
 	i = 0;
 	while (i < n)
-	{
-		((unsigned char *)s)[i] = c;
+	{	
+		((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 		i++;
 	}
-	return (s);
+	return (dest);
 }
-/*
+
 int	main(void)
 {
-	char	str[] = "Hola que tal";
-	char	*ptr;
+	char	src[] = "Hola";
+	char	dest[] = "que tal";
 
-	printf ("Str: %s\n", str);
-	ptr = ft_memset (str, 65, 3);
-	printf ("Str after memset: %s\n", str);
-	printf ("ptr: %s\n", ptr);
+	ft_memcpy (dest, src, 3);
+	printf("src: %s\ndest: %s", src, dest);
 	return (0);
-}*/
+}
