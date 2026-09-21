@@ -6,7 +6,7 @@
 /*   By: jona <jmunoz-j@student.42malaga.com>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/17 07:51:53 by jona              #+#    #+#             */
-/*   Updated: 2026/09/17 08:04:43 by jona             ###   ########.fr       */
+/*   Updated: 2026/09/21 13:31:28 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 //#include <string.h>
 size_t	ft_strlen(const char *s)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])
