@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jona <jmunoz-j@student.42malaga.com>       +#+  +:+       +#+        */
+/*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/18 08:41:18 by jona              #+#    #+#             */
-/*   Updated: 2026/09/18 09:02:12 by jona             ###   ########.fr       */
+/*   Created: 2026/09/21 11:22:57 by jmunoz-j          #+#    #+#             */
+/*   Updated: 2026/09/21 13:21:42 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,20 +15,28 @@
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned int	i;
-	char	temp[n];
+	unsigned char	*temp;
 
+	if (dest == NULL || src == NULL)
+		return (NULL);
+	temp = ((unsigned char *)src);
 	i = 0;
-
-	while (i < n+1)
+	if ( temp <= ((unsigned char *)dest))
 	{
-		temp[i] = ((unsigned char *)src)[i];
-		i++;
+		while (i < n)
+		{
+			temp[i] = ((unsigned char *)dest)[i];
+			i++;
+		}
 	}
-	i = 0;
-	while (i < n+1)
+	else
 	{
-		((unsigned char *)dest)[i] = temp[i];
-		i++;
+		i = n;
+		while (n > 0) 
+		{
+			temp[i] = ((unsigned char *)dest)[i];
+			n--;
+		}
 	}
 	return (dest);
 }
@@ -36,9 +44,8 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 int	main(void)
 {
 	char	str[] = "Hola";
-	char	out[] = "A";
-	printf ("%s\n", str);
-	ft_memmove (out, str, 4);
+	char	out[] = "Abc";
+	ft_memmove (out, str, 3);
 	printf("str: %s\ndest: %s\n", str, out);
 	return (0);
 }
