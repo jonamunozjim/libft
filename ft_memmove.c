@@ -6,7 +6,7 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 11:22:57 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/21 14:00:24 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/21 14:14:19 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,18 @@
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	unsigned int	i;
+	int	i;
 	unsigned char	temp[n];
-	
+	int	j;
+
 	if (dest == NULL || src == NULL)
 		return (NULL);
-	while (i < n)
-	{
-		temp[i] = '\0';
-		i++;
-	}
 	i = 0;
+	j = 0;
 	if (temp <= ((unsigned char *)src))
 	{
-		while (i < n)
+		j = n;
+		while (i < j)
 		{
 			temp[i] = ((unsigned char *)src)[i];
 			i++;
@@ -36,29 +34,15 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	else
 	{
 		i = n;
-		while (i > 0) 
+		while (i >= 0) 
 		{
-			temp[i] = ((unsigned char *)src)[i];
+			temp[j] = ((unsigned char *)src)[i];
 			i--;
+			j++;
 		}
 	}
-	if (((unsigned char *)dest) <= temp)
-	{
-		while (i < n)
-		{
-			((unsigned char *)dest)[i] = temp[i];
-			i++;
-		}
-	}
-	else
-	{
-		i = n;
-		while (i > 0)
-		{
-			((unsigned char *)dest)[i] = temp[i];
-			 i--;
-		}
-	}
+
+/********/
 	return (dest);
 }
 
