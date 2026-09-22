@@ -6,7 +6,7 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 11:02:44 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/22 13:12:18 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/22 13:45:05 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,6 +49,6 @@ int	main(void)
 
 	c = 'a';
 	out = ft_strchr (s, c);
-	printf ("%c\n", out[0]);
+	printf ("%s\n", out);
 	return (0);
 }*/
