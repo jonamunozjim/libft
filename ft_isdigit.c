@@ -3,15 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jona <jmunoz-j@student.42malaga.com>       +#+  +:+       +#+        */
+/*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/17 07:46:41 by jona              #+#    #+#             */
-/*   Updated: 2026/09/17 07:46:53 by jona             ###   ########.fr       */
+/*   Created: 2026/09/22 09:29:27 by jmunoz-j          #+#    #+#             */
+/*   Updated: 2026/09/22 10:33:45 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <stdio.h>
-//#include <ctype.h>
+#include "libft.h"
 
 int	ft_isdigit(unsigned char c)
 {

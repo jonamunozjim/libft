@@ -3,15 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isascii.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jona <jmunoz-j@student.42malaga.com>       +#+  +:+       +#+        */
+/*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/17 07:48:02 by jona              #+#    #+#             */
-/*   Updated: 2026/09/17 07:48:14 by jona             ###   ########.fr       */
+/*   Created: 2026/09/22 09:28:48 by jmunoz-j          #+#    #+#             */
+/*   Updated: 2026/09/22 09:29:14 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 //#include <stdio.h>
 //#include <ctype.h>
+
 int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)

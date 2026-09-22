@@ -3,15 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jona <jmunoz-j@student.42malaga.com>       +#+  +:+       +#+        */
+/*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/17 07:51:53 by jona              #+#    #+#             */
-/*   Updated: 2026/09/21 13:31:28 by jmunoz-j         ###   ########.fr       */
+/*   Created: 2026/09/22 09:36:41 by jmunoz-j          #+#    #+#             */
+/*   Updated: 2026/09/22 09:37:12 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 //#include <stdio.h>
 //#include <string.h>
+
 size_t	ft_strlen(const char *s)
 {
 	size_t	i;

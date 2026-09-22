@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jona <jmunoz-j@student.42malaga.com>       +#+  +:+       +#+        */
+/*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/17 08:06:00 by jona              #+#    #+#             */
-/*   Updated: 2026/09/17 08:06:11 by jona             ###   ########.fr       */
+/*   Created: 2026/09/22 09:37:31 by jmunoz-j          #+#    #+#             */
+/*   Updated: 2026/09/22 09:38:02 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 //#include <stdio.h>
 //#include <ctype.h>

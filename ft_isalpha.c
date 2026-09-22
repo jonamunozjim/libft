@@ -3,14 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jona <jmunoz-j@student.42malaga.com>       +#+  +:+       +#+        */
+/*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/17 07:44:00 by jona              #+#    #+#             */
-/*   Updated: 2026/09/17 07:46:17 by jona             ###   ########.fr       */
+/*   Created: 2026/09/22 09:28:09 by jmunoz-j          #+#    #+#             */
+/*   Updated: 2026/09/22 09:28:35 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-//#include <unistd.h>
+#include <libft.h>
 //#include <ctype.h>
 //#include <stdio.h>
 

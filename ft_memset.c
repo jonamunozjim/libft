@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jona <jmunoz-j@student.42malaga.com>       +#+  +:+       +#+        */
+/*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/17 08:43:06 by jona              #+#    #+#             */
-/*   Updated: 2026/09/17 10:48:32 by jona             ###   ########.fr       */
+/*   Created: 2026/09/22 09:35:42 by jmunoz-j          #+#    #+#             */
+/*   Updated: 2026/09/22 09:44:46 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 //#include <stdio.h>
 
 void	*ft_memset(void *s, int c, size_t n)

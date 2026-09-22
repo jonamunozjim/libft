@@ -6,51 +6,45 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 11:22:57 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/21 14:14:19 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/22 10:32:50 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
+#include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	int	i;
-	unsigned char	temp[n];
-	int	j;
+	unsigned int	i;
 
 	if (dest == NULL || src == NULL)
 		return (NULL);
 	i = 0;
-	j = 0;
-	if (temp <= ((unsigned char *)src))
+	if ((unsigned char *)dest <= ((unsigned char *)src))
 	{
-		j = n;
-		while (i < j)
+		while (i < n)
 		{
-			temp[i] = ((unsigned char *)src)[i];
+			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 			i++;
 		}
 	}
 	else
 	{
 		i = n;
-		while (i >= 0) 
+		while (i != 0)
 		{
-			temp[j] = ((unsigned char *)src)[i];
 			i--;
-			j++;
+			((unsigned char *)dest)[i] = ((unsigned char *)src)[i];
 		}
 	}
-
-/********/
 	return (dest);
 }
-
+/*
 int	main(void)
 {
-	char	str[] = "Hola";
-	char	out[] = "Abc";
+	char	str[] = "999";
+	char	out[] = "00000";
 	ft_memmove (out, str, 2);
 	printf("str: %s\ndest: %s\n", str, out);
+	printf("strlen: %li", ft_strlen(str));
 	return (0);
-}
+}*/

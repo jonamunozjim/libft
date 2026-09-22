@@ -3,12 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jona <jmunoz-j@student.42malaga.com>       +#+  +:+       +#+        */
+/*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/17 07:47:18 by jona              #+#    #+#             */
-/*   Updated: 2026/09/17 07:47:44 by jona             ###   ########.fr       */
+/*   Created: 2026/09/22 09:27:29 by jmunoz-j          #+#    #+#             */
+/*   Updated: 2026/09/22 09:27:58 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <libft.h>
 
 //#include <stdio.h>
 //#include <ctype.h>

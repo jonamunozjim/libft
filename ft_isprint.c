@@ -3,15 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jona <jmunoz-j@student.42malaga.com>       +#+  +:+       +#+        */
+/*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/17 07:48:29 by jona              #+#    #+#             */
-/*   Updated: 2026/09/17 07:48:39 by jona             ###   ########.fr       */
+/*   Created: 2026/09/22 09:30:19 by jmunoz-j          #+#    #+#             */
+/*   Updated: 2026/09/22 09:32:35 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 //#include <stdio.h>
 //#include <ctype.h>
+
 int	ft_isprint(int c)
 {
 	if (c >= 32 && c <= 176)

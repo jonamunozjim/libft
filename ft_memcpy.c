@@ -3,13 +3,14 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jona <jmunoz-j@student.42malaga.com>       +#+  +:+       +#+        */
+/*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/17 10:50:36 by jona              #+#    #+#             */
-/*   Updated: 2026/09/18 08:39:54 by jona             ###   ########.fr       */
+/*   Created: 2026/09/22 09:32:51 by jmunoz-j          #+#    #+#             */
+/*   Updated: 2026/09/22 09:34:04 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 //#include <stdio.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
