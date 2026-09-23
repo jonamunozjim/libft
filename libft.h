@@ -6,7 +6,7 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 09:24:59 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/23 12:06:59 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/23 12:47:08 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,6 @@ char	*ft_strrchr(const char *s, int c);
 char	*strnstr(const char *big, const char *little, size_t len);
 void	*memchr(const void *s, int c, size_t n);
 int	memcmp(const void *s1, const void *s2, size_t n);
-
+int	ft_atoi(const char *nptr);
 
 #endif
