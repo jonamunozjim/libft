@@ -6,7 +6,7 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 09:24:59 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/22 10:36:14 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/23 10:29:55 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,12 @@ size_t	ft_strlen(const char *s);
 int	ft_tolower(int c);
 int	ft_toupper(int c);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
+char	*ft_strchr(const char *s, int c);
+size_t	ft_strlcat(char *dst, const char *src, size_t size);
+int	ft_strncmp(const char *s1, const char *s2, size_t n);
+char	*ft_strrchr(const char *s, int c);
+char	*strnstr(const char *big, const char *little, size_t len);
+void	*memchr(const void *s, int c, size_t n);
 
 
 #endif
