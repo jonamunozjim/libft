@@ -6,7 +6,7 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 09:24:59 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/24 14:18:56 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/24 14:32:12 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
 
 
 #endif
