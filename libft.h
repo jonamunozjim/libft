@@ -6,7 +6,7 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 09:24:59 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/23 14:18:50 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/24 10:00:31 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,6 @@ int	memcmp(const void *s1, const void *s2, size_t n);
 int	ft_atoi(const char *nptr);
 void	*calloc(size_t nmemb, size_t size);
 char	*strdup(const char *s);
-char	*ftsubstr(char const *s, unsigned int start, size_t len);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 #endif
