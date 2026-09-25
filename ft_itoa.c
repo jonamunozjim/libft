@@ -6,7 +6,7 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/24 11:01:38 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/24 13:07:56 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/25 09:34:25 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ char	*ft_itoa(int n)
 	out = malloc ((len + 1) * sizeof(char));
 	if (out == NULL)
 		return (NULL);
-	fill_str(out, num, len);
+	fill_str(out, n, len);
 	convert_int_to_char(out, num, len);
 	return (out);
 }
@@ -82,7 +82,7 @@ int	main(void)
 {
 	int	n;
 
-	n = 0;
+	n = -348;
 	printf("Int: %i\nft_itoa: %s\n", n, ft_itoa(n));
 	return (0);
 }*/

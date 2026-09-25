@@ -6,7 +6,7 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 14:41:00 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/24 10:59:43 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/25 10:52:32 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,12 +84,12 @@ char	*ft_strtrim(char const *s1, char const *set)
 	end = find_last(s1, set) - start;
 	return (ft_substr(s1, start, end));
 }
-/*
+
 int	main(void)
 {
-	char	s1[] = "12356712";
+	char	s1[] = "123567123";
 	char	set[] = "23";
 
 	printf("s1: %s\nset: %s\ntrim: %s\n", s1, set, ft_strtrim(s1, set));
 	return (0);
-}*/
+}
