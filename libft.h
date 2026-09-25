@@ -6,7 +6,7 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 09:24:59 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/25 09:55:14 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/25 14:46:46 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,8 @@ typedef struct	s_list
 	void	*content;
 	struct s_list	*next;
 }	t_list;
+t_list	*ft_lstnew(void *content);
+void	*ft_lstadd_front(t_list **lst, t_list *new);
+unsigned int	ft_lstsize(t_list *lst);
 
 #endif
