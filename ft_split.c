@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jmunoz-j <jmunoz-j@student.42malaga>       +#+  +:+       +#+        */
+/*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/09/28 20:29:48 by jona              #+#    #+#             */
-/*   Updated: 2026/09/28 22:45:15 by jona             ###   ########.fr       */
+/*   Created: 2026/09/29 09:16:12 by jmunoz-j          #+#    #+#             */
+/*   Updated: 2026/09/29 09:28:23 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,7 +75,7 @@ char	**ft_split(char const *s, char c)
 	out[count] = NULL;
 	return (out);
 }
-
+/*
 int	main(void)
 {
 	char	s[] = "Hola   que tal como estas";
@@ -102,6 +102,5 @@ int	main(void)
 		i++;
 	}
 	free (split);
-	//free (s);
 	return (0);
-}
+}*/
