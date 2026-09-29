@@ -6,7 +6,7 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 11:02:44 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/22 13:45:05 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/29 15:26:36 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,17 +38,19 @@ char	*ft_strchr(const char *s, int c)
 				i++;
 		}
 	}
-	return (&((char *)s)[i]);
+	return (NULL);
 }
 /*
 int	main(void)
 {
-	char	s[] = "Hola que tal";
+	char	s[] = "213";
 	char	*out;
 	char	c;
 
-	c = 'a';
+	c = '4';
 	out = ft_strchr (s, c);
-	printf ("%s\n", out);
+	//if (out == NULL)
+	//	return (NULL);
+	printf ("%s\n", NULL);
 	return (0);
 }*/

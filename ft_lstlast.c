@@ -6,7 +6,7 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/28 09:58:09 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/28 11:30:06 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/29 10:34:44 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,16 +32,14 @@ t_list	*ft_lstlast(t_list *lst)
 /*
 int	main(void)
 {
-	t_list	*root;
 	t_list	*lst;
 
-	root = ft_lstnew ("111");
-	lst = ft_lstnew("2");
-	printf("Before\nroot: %p\nroot->next: %p\n\nlst: %p\nlst->next: %p\n\n", 
-		root, root->next, lst, lst->next);
-        ft_lstadd_front(&root, lst);
-	printf("----After\nroot: %p\nroot->next: %p\n\nroot-next-next: %p\n", 
-		root, root->next, root->next->next);
-	printf("%p", root->next->next);
+	lst = ft_lstnew("a");
+	lst->next = ft_lstnew("b");
+	lst->next->next = ft_lstnew("c");
+	printf("lst: %p\n", (char *)lst);
+	printf("lst2: %p\n", (char *)lst->next);
+	printf("lst3: %p\n", (char *)lst->next->next);
+	printf("\nLast: %p\n", ft_lstlast(lst));
 	return (0);
 }*/
