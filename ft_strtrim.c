@@ -25,39 +25,48 @@
 
 #include "libft.h"
 
+static void	fill_output(char *s1, char *output,
+	unsigned int start, unsigned int end)
+{
+	unsigned int	i;
+
+	i = 0;
+	while ((start + i) <= end)
+	{
+		output[i] = s1[start + i];
+		i++;
+	}
+	output[i] = '\0';
+}
+
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	unsigned int	start;
 	unsigned int	end;
-	unsigned int	i;
 	char			*output;
 
-	start = 0;
-	i = 0;
-	end = ft_strlen(s1);
-	output = malloc((ft_strlen(s1) + 1) * sizeof(char));
-	if (output == NULL)
+	if (!s1 || !set)
 		return (NULL);
+	start = 0;
+	end = ft_strlen(s1);
 	while (ft_strchr(set, s1[start]) && s1[start])
 		start++;
+	if (s1[start] == '\0')
+		return (ft_substr (s1, 0, 0));
 	while (ft_strchr(set, s1[end]) && s1[start])
 		end--;
+	output = malloc((end - start + 2) * sizeof(char));
+	if (output == NULL)
+		return (NULL);
 	if (end != 0)
-	{
-		while ((start + i) <= end)
-		{
-			output[i] = s1[start + i];
-			i++;
-		}
-	}
-	output[i] = '\0';
+		fill_output ((char *)s1, output, start, end);
 	return (output);
 }
 /*
 int	main(void)
 {
-	char	s1[] = "   ";
-	char	set[] = "  ";
+	char	s1[] = "xax";
+	char	set[] = "x";
 	char	*trim;
 
 	trim = ft_strtrim (s1, set);

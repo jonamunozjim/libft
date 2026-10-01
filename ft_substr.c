@@ -30,14 +30,20 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char			*sub;
 	unsigned int	i;
+	size_t			s_len;
 
-	if (start >= ft_strlen(s))
+	if (!s)
+		return (NULL);
+	s_len = ft_strlen (s);
+	if (start >= s_len)
 		len = 0;
+	else if (len > (s_len - start))
+		len = s_len - start;
 	i = 0;
 	sub = malloc((len + 1) * sizeof(char));
 	if (sub == NULL)
 		return (NULL);
-	while (s[start + i] && i < len)
+	while (i < len && s[start + i])
 	{
 		sub[i] = s[start + i];
 		i++;
@@ -50,11 +56,10 @@ int	main(void)
 {
 	unsigned int	start;
 	size_t	len;
-	char	s[] = "Hola que tal";
+	char	s[] = "asdfgh";
 	
 	start = 30;
 	len = 50;
 	printf ("Str: %s\nSub: %s\n", s, ft_substr (s, start, len));
 	return (0);
-}	
-*/
+}*/	

@@ -33,7 +33,7 @@ char	*ft_strchr(const char *s, int c)
 	{
 		while (s[i])
 		{
-			if (s[i] == c)
+			if (s[i] == (char)c)
 				return (&((char *)s)[i]);
 			else
 				i++;
@@ -44,11 +44,12 @@ char	*ft_strchr(const char *s, int c)
 /*
 int	main(void)
 {
-	char	s[] = "213";
+	char	s[] = "tripouille";
 	char	*out;
 	char	c;
 
-	c = '\0';
+	c = 't';
+	printf("%c", c);
 	out = ft_strchr (s, c);
 	//if (out == NULL)
 	//	return (NULL);
