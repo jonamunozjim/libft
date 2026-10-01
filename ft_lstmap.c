@@ -29,7 +29,6 @@
 	free(ptr);
 }
 */
-//void	del(void *ptr);
 
 /*static void	*f_to_upper(void *content)
 {

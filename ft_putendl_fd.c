@@ -14,7 +14,7 @@
  *                                                              *
  * Description:                                                 *
  *      Send 's' string to the specified file descriptor,	*
- *      followed of a \n 					*
+ *      followed of a  			
  *                                                              *
  * Return value:                                                *
  *      No value.                                               * 

@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-unsigned int	word_count(char const *s, char c)
+static unsigned int	word_count(char const *s, char c)
 {
 	unsigned int	i;
 	unsigned int	count;
@@ -45,7 +45,7 @@ static void	copy_to_string(char **out, char *temp, unsigned int j)
 	}
 }
 
-void	fill_split(char **out, char const *s, char c, unsigned int count)
+static void	fill_split(char **out, char const *s, char c, unsigned int count)
 {
 	unsigned int	i;
 	unsigned int	j;

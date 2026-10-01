@@ -10,8 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// Description:
+//	Copy n bytes from src to dst position.
+//
+//	Parameters:
+//		dest, destination.
+//		src, source.
+//		n, bytes to copy.
+//
+//	Return value:
+//		ptr to dest.
+
 #include "libft.h"
-//#include <stdio.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

@@ -10,10 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+// Description:
+//	Check if a character belongs to ASCII character set.
+//
+//	Parameters:
+//		c, character to be checked.
+//
+//	Return value:
+//		1, if True
+//		0, if False
 
-//#include <stdio.h>
-//#include <ctype.h>
+#include "libft.h"
 
 int	ft_isascii(int c)
 {

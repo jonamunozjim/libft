@@ -10,8 +10,18 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// Description:
+//	Fills a memory block with a specific byte..
+//
+//	Parameters:
+//		s, position to be filled
+//		c, byte value
+//		n, bytes to be filled
+//
+//	Return value:
+//		ptr to dest.
+
 #include "libft.h"
-//#include <stdio.h>
 
 void	*ft_memset(void *s, int c, size_t n)
 {

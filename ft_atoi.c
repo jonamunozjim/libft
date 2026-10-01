@@ -10,16 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/****************************************************************
- *								*
- *  Description:						*
- *  	Converts initial position of the string pointed by nptr *
- *  	to int.							*
- *								*
- *  Return value:						*
- *  	Converted value or 0 on error.				*
- *  								*
- ****************************************************************/
+// Description:
+// Converts initial position of the string pointed by nptr to int.
+//
+//  Return value:
+//  	Converted value or 0 on error.
 
 #include "libft.h"
 

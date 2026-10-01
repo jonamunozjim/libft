@@ -10,17 +10,13 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-/****************************************************************
- * 								*
- *  Description:						*
- *  	Allocates memory from an array of nmemb elements of 	*
- *  	size bytes and return a pointer to the allocated memory *
- *  								*
- *  Return value:						*
- *  	Memory is set to zero.					*
- *  	If nmemb or size is 0, ft_calloc() return NULL		*
- *								*
- ***************************************************************/
+// Description:	
+//	Allocates memory from an array of nmemb elements of
+// 	size bytes and return a pointer to the allocated memory.
+//
+//	Return value:
+//		ptr set to zero.
+// 		If nmemb or size is 0, ft_calloc() return NULL
 
 #include "libft.h"
 

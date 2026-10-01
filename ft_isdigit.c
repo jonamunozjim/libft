@@ -10,6 +10,16 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// Description:
+//	Check if a character is digit.
+//
+//	Parameters:
+//		c, character to be checked.
+//
+//	Return value:
+//		1, if True
+//		0, if False
+
 #include "libft.h"
 
 int	ft_isdigit(unsigned char c)

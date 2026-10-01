@@ -10,9 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// Description:
+//	Check if a character is alphabetic.
+//
+//	Parameters:
+//		c, character to be checked.
+//
+//	Return value:
+//		1, if True
+//		0, if False
+
 #include "libft.h"
-//#include <ctype.h>
-//#include <stdio.h>
 
 int	ft_isalpha(unsigned char c)
 {

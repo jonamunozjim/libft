@@ -10,9 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+// Description:
+//	Set n characters to Null
+//
+//	Parameters:
+//		S, array to set
+//		n, number of bytes to be set
+//
+//	Return value:
+//		No value
 
-//#include <stdio.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

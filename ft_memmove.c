@@ -10,6 +10,17 @@
 /*                                                                            */
 /* ************************************************************************** */
 
+// Description:
+//	Copy n bytes from src to dst (handling overlapping correctly).
+//
+//	Parameters:
+//		dest, destination.
+//		src, source.
+//		n, bytes to copy.
+//
+//	Return value:
+//		ptr to dest.
+
 #include "libft.h"
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
