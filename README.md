@@ -119,4 +119,4 @@ To use this library in your own projects:
 
 During the development of this project, AI was used as an educational support tool, to translate and interpret error logs from tools like Valgrind (e.g., Invalid read of size 1 or Address is not stack'd), to understand the mechanics of logical short-circuiting in conditionals, and to analyze potential integer overflow/underflow scenarios and Memory Leaks.
 
-    The AI was explicitly instructed not to provide solved code, but to limit itself to explaining the underlying logic and pointing out algorithmic flaws, ensuring that all project code was written and iterated autonomously.
+The AI was explicitly instructed not to provide solved code, but to limit itself to explaining the underlying logic and pointing out algorithmic flaws, ensuring that all project code was written and iterated autonomously.
