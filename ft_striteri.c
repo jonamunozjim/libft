@@ -6,7 +6,7 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/24 14:00:34 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/24 14:07:37 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/29 17:48:00 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,12 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int	i;
 
+	if (!s || !f)
+		return ;
 	i = 0;
 	while (s[i])
 	{
-		s[i] = f(i, &s[i]);
+		f(i, &s[i]);
+		i++;
 	}
 }

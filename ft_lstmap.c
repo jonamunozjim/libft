@@ -6,7 +6,7 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 09:29:37 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/29 11:09:42 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/29 15:47:12 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,14 +29,14 @@
 	free(ptr);
 }
 */
-void	del(void *ptr);
-//This testing function has been created with the AI aid for testing purpose only.
-void	*f_to_upper(void *content)
+//void	del(void *ptr);
+
+/*static void	*f_to_upper(void *content)
 {
 	char	*new_str;
 	int		i;
 
-	new_str = strdup(content);
+	new_str = ft_strdup(content);
 	if (!new_str)
 		return (NULL);
 	i = 0;
@@ -46,8 +46,8 @@ void	*f_to_upper(void *content)
 			new_str[i] = new_str[i] - 32;
 		i++;
 	}
-	return ((char *)new_str); 
-}
+	return ((char *)new_str);
+}*/
 
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
@@ -81,8 +81,10 @@ int	main(void)
 	lst->next = ft_lstnew("b");
 	lst->next->next = ft_lstnew("c");
 	lst->next->next->next = ft_lstnew("d");
-	printf("lst: %s %s %s %s\n-----\n", (char *)lst->content, (char *)lst->next->content, 
-			(char *)lst->next->next->content, (char *)lst->next->next->next->content);
+	printf("lst: %s %s %s %s\n-----\n", (char *)lst->content, 
+			(char *)lst->next->content, 
+			(char *)lst->next->next->content, 
+			(char *)lst->next->next->next->content);
 	new_lst = ft_lstmap(lst, f_to_upper, del);
 	printf("\n------------------------\n");
 	printf("New_lst: %s\n", (char *)new_lst->content);

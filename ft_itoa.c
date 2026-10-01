@@ -6,7 +6,7 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/24 11:01:38 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/25 09:34:25 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/30 17:24:07 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,12 +29,16 @@ static	int	int_len(int n)
 {
 	int	len;
 
+	if (n == 0)
+		return (1);
 	len = 0;
 	while (n != 0)
 	{
 		n = n / 10;
 		len++;
 	}
+	if (n < 0)
+		len++;
 	return (len);
 }
 
@@ -44,16 +48,21 @@ static void	fill_str(char *str, int n, int len)
 		str[0] = '0';
 	if (n < 0)
 		str[0] = '-';
-	str[len + 1] = '\0';
+	str[len] = '\0';
 }
 
 static void	convert_int_to_char(char *str, long int num, int len)
 {
-	while (num != 0)
+	if (num == 0)
+		str[0] = '0';
+	else
 	{
-		len--;
-		str[len] = (num % 10) + '0';
-		num = num / 10;
+		while (num != 0)
+		{
+			len--;
+			str[len] = (num % 10) + '0';
+			num = num / 10;
+		}
 	}
 }
 
@@ -81,8 +90,11 @@ char	*ft_itoa(int n)
 int	main(void)
 {
 	int	n;
-
+	char	*result;
 	n = -348;
-	printf("Int: %i\nft_itoa: %s\n", n, ft_itoa(n));
+
+	result = ft_itoa (n);
+	printf("Int: %i\nft_itoa: %s\n", n, result);
+	free (result);
 	return (0);
 }*/

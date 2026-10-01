@@ -6,7 +6,7 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 14:41:00 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/29 15:21:04 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/10/01 09:22:40 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,16 +38,17 @@ char	*ft_strtrim(char const *s1, char const *set)
 	output = malloc((ft_strlen(s1) + 1) * sizeof(char));
 	if (output == NULL)
 		return (NULL);
-	while (ft_strchr(set, s1[start]))
+	while (ft_strchr(set, s1[start]) && s1[start])
 		start++;
-	while (ft_strchr(set, s1[end]))
+	while (ft_strchr(set, s1[end]) && s1[start])
 		end--;
-	printf("_start: %i_\n_end: %i_\n", start, end);
-	i = 0;
-	while ((start + i) <= end)
+	if (end != 0)
 	{
-		output[i] = s1[start + i];
-		i++;
+		while ((start + i) <= end)
+		{
+			output[i] = s1[start + i];
+			i++;
+		}
 	}
 	output[i] = '\0';
 	return (output);
@@ -55,8 +56,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 /*
 int	main(void)
 {
-	char	s1[] = "1123567123";
-	char	set[] = "213";
+	char	s1[] = "   ";
+	char	set[] = "  ";
 	char	*trim;
 
 	trim = ft_strtrim (s1, set);

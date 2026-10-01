@@ -6,13 +6,13 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 14:27:09 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/23 10:18:15 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/30 12:59:24 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*strnstr(const char *big, const char *little, size_t len)
+char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	i;
 	size_t	j;
@@ -21,35 +21,33 @@ char	*strnstr(const char *big, const char *little, size_t len)
 	j = 0;
 	if (ft_strlen(little) == 0)
 		return ((char *)big);
-	while (big[i] && i < len)
+	while (i < len && big[i])
 	{
+		j = 0;
 		if (big[i] == little[j])
 		{
-			while (little[j] && big[i])
+			while (little[j] == big [i + j] && (i + j) < len)
 			{
-				if (little[j] == big[i + j])
-				{
-					if (little[j + 1] == '\0')
-						return (&((char *)big)[i]);
-				}
-				j++;
+				if (little[j + 1] == '\0')
+					return ((char *)&big[i]);
+				else
+					j++;
 			}
 		}
 		i++;
 	}
 	return (NULL);
 }
-/*:
-//Main inputs >> av[1][0]: len; av[2]: big; av[3]: little
-int	main(int ac, char **av)
+/*
+int	main(void)
 {
 	int	len;
+	char	big[] = "lorem ipsum dolor sit amet";
+	char	little[] = "ipsum";
 
-	len = av[1][0] - '0';
-	if (ac == 1)
-		printf ("No strings added");
+	len = 10;
 	printf ("Len: %i\nBig: %s\nLittle: %s\nFound: %s\n", 
-	len, av[2], av[3], strnstr(av[2], av[3], len));
+	len, big, little,ft_strnstr(big, little, len));
+	printf("ptr: %p\n", ft_strnstr(big, little, len));
 	return (0);
-}
-*/
+}*/

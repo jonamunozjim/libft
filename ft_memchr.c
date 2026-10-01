@@ -6,7 +6,7 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 10:23:12 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/23 11:12:55 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/30 12:38:00 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
  * 	Scan initial n bytes of the memory area pointed by s.	*
  *								*
  * Return value:						*
- * 	A pointer to the matchin byte or NULL if not found      *
+ * 	A pointer to the matching byte or NULL if not found      *
  *								*
  ****************************************************************/
 
@@ -28,19 +28,18 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (((unsigned char *)s)[i] == c)
+		if (((unsigned char *)s)[i] == (unsigned char)c)
 			return ((void *)&((unsigned char *)s)[i]);
-		else
-			i++;
+		i++;
 	}
 	return (NULL);
 }
 /*
 int	main(void)
 {
-	size_t	n = 7;
-	char	s[] = "Holaa";
-	int	c = 'l';
+	size_t	n = 10;
+	char	s[] = "42 Firenze";
+	int	c = 'F';
 	char	*output;
 
 	output = ft_memchr (s, c, n);

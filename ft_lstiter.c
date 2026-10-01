@@ -6,7 +6,7 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/28 15:47:08 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/28 16:04:31 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/29 17:44:36 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,11 +22,11 @@
 
 #include "libft.h"
 
-void ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_lstiter(t_list *lst, void (*f)(void *))
 {
 	if (!lst || !f)
-		return NULL;
-	while(lst)
+		return ;
+	while (lst)
 	{
 		f(lst -> content);
 		lst = lst -> next;
@@ -38,8 +38,8 @@ int	main(void)
 	t_list	*root;
 	t_list	*temp;
 
-	root = ft_lstnew(strdup("aaa"));
-	root->next = ft_lstnew(strdup("bbb"));
+	root = ft_lstnew(ft_strdup("aaa"));
+	root->next = ft_lstnew(ft_strdup("bbb"));
 	temp = root;
 	while (temp)
 	{
@@ -53,4 +53,3 @@ int	main(void)
 	free (temp);
 	return (0);
 }*/
-

@@ -6,13 +6,11 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 09:36:41 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/22 09:37:12 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/30 09:50:27 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-//#include <stdio.h>
-//#include <string.h>
 
 size_t	ft_strlen(const char *s)
 {
@@ -26,10 +24,8 @@ size_t	ft_strlen(const char *s)
 /*
 int	main(void)
 {
-	char	str[] = "Hola";
+	char	str[] = " world";
 
-	printf ("len: %lu", ft_strlen(str));
-	//printf ("ft_length: %lu\nlength: %lu",
-	//	       	ft_strlen (str), strlen(str));
+	printf ("len: %li", ft_strlen(str));
 		return (0);
 }*/

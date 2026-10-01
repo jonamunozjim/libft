@@ -6,7 +6,7 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 14:19:10 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/23 14:38:07 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/30 13:33:08 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,14 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (str == NULL)
 		return (NULL);
 	ft_strlcpy(str, s1, len1);
-	ft_strlcat(str, s2, len2);
+	ft_strlcat(str, s2, (len1 + len2));
 	return (str);
 }
 /*
 int	main(void)
 {
-	char	s1[] = "Hola";
-	char	s2[] = " que tal";
+	char	s1[] = "hello";
+	char	s2[] = " world";
 
 	printf("s1: %s\ns2: %s\nJoin: %s", s1, s2, ft_strjoin(s1, s2));
 	return (0);

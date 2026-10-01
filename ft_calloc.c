@@ -6,7 +6,7 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/23 12:46:57 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/23 13:15:45 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/30 13:21:03 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,11 +27,15 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	unsigned char	*s;
+	size_t			bytes;
 
-	if (nmemb == 0 || size == 0)
+	bytes = nmemb * size;
+	if (nmemb != 0 && (bytes / nmemb) != size)
 		return (NULL);
-	s = malloc(nmemb * sizeof(size));
-	ft_bzero (s, nmemb);
+	s = malloc(nmemb * size);
+	if (s == NULL)
+		return (NULL);
+	ft_bzero (s, (nmemb * size));
 	return ((void *)s);
 }
 /*

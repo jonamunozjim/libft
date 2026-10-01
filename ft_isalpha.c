@@ -6,11 +6,11 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 09:28:09 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/22 09:28:35 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/29 17:46:29 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include "libft.h"
 //#include <ctype.h>
 //#include <stdio.h>
 

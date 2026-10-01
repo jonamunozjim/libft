@@ -6,7 +6,7 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/29 09:16:12 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/29 11:59:10 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/30 15:59:26 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,18 +21,28 @@ unsigned int	word_count(char const *s, char c)
 	count = 0;
 	while (s[i])
 	{
-		if (i == 0 || s[i] == c)
+		if (s[i] != c)
 		{
-			i++;
-			while (s[i] != c && s[i])
-				i++;
-			if (s[i + 1] != c)
+			if (i == 0 || s[i - 1] == c)
 				count++;
 		}
-		else
-			i++;
+		i++;
 	}
 	return (count);
+}
+
+static void	copy_to_string(char **out, char *temp, unsigned int j)
+{
+	out[j] = ft_strdup (temp);
+	if (out[j] == NULL)
+	{
+		while (j > 0)
+		{
+			j--;
+			out[j] = NULL;
+		}
+		out = NULL;
+	}
 }
 
 void	fill_split(char **out, char const *s, char c, unsigned int count)
@@ -57,7 +67,7 @@ void	fill_split(char **out, char const *s, char c, unsigned int count)
 			k++;
 		}
 		temp[k] = '\0';
-		out[j] = strdup (temp);
+		copy_to_string(out, temp, j);
 		j++;
 		k = 0;
 	}
@@ -78,14 +88,16 @@ char	**ft_split(char const *s, char c)
 /*
 int	main(void)
 {
-	char	s[] = "Hola   que tal como estas";
+	//char	s[] = "xx xxhello";
+	//char	s[] = "helloxxxx";
+	char	s[] = "Holaxxquextal";
 	char	c;
 	char	**split;
 	int 	i;
 	int	count;
 	
 	i = 0;
-	c = ' ';
+	c = 'x';
 	count = word_count (s, c);
 	//s = ft_strdup ("Hola que tal como estas");
 	printf("Str: %s\nc: %c\nword_count: %i\n---Split\n",s, c, count);

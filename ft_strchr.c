@@ -16,6 +16,7 @@
 If c is '\0' it returns a pointer to the terminator
 */
 #include "libft.h"
+#include <stdio.h>
 
 char	*ft_strchr(const char *s, int c)
 {
@@ -26,7 +27,7 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	if (c == '\0')
 	{
-		return (&((char *)s)[len + 1]);
+		return (&((char *)s)[len]);
 	}
 	else
 	{
@@ -47,10 +48,10 @@ int	main(void)
 	char	*out;
 	char	c;
 
-	c = '4';
+	c = '\0';
 	out = ft_strchr (s, c);
 	//if (out == NULL)
 	//	return (NULL);
-	printf ("%s\n", NULL);
+	printf ("%s\n", out);
 	return (0);
 }*/

@@ -6,7 +6,7 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/28 12:47:07 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/28 15:45:25 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/29 17:50:12 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,12 @@
 
 #include "libft.h"
 
-void	del(void *content)
-{
-	free (content);
-}
-
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*temp;
 
+	if (!lst || !del)
+		return ;
 	while (*lst)
 	{
 		temp = (*lst)->next;
@@ -45,9 +42,9 @@ int	main(void)
 {
 	t_list	*root;
 
-	root = ft_lstnew(strdup("a"));
-	root->next = ft_lstnew(strdup("b"));
-	root->next->next = ft_lstnew(strdup("c"));
+	root = ft_lstnew(ft_("a"));
+	root->next = ft_lstnew(("b"));
+	root->next->next = ft_lstnew(("c"));
 	ft_lstclear(&root, del);
 	return(0);
 }*/

@@ -25,13 +25,15 @@
 
 #include "libft.h"
 
-char	*strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
 	char	*dup;
 	size_t	len;
 
 	len = ft_strlen (s) + 1;
 	dup = malloc(len * sizeof(char));
+	if (dup == NULL)
+		return (NULL);
 	ft_strlcpy(dup, s, len);
 	return (dup);
 }
@@ -41,7 +43,7 @@ int	main(void)
 	char	s[] = "Hola";
 	char	*dup;
 
-	dup = strdup (s);
+	dup = ft_strdup (s);
 	printf ("Str: %s\nDup: %s", s, dup);
 	return (0);
 }*/	

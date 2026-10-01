@@ -30,6 +30,8 @@ void	del(void *content)
 
 void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
+	if (!lst || !del)
+		return ;
 	del(lst->content);
 	free (lst);
 }
@@ -39,7 +41,7 @@ int	main(void)
 	t_list	*lst;
 	char	*s;
 	
-	s = strdup ("Hola");
+	s =  ("Hola");
 	lst = ft_lstnew(s);
 	lst->next = ft_lstnew(s);
 	printf("Content0: %s\nContent1: %s\n", 

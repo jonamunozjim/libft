@@ -6,7 +6,7 @@
 /*   By: jmunoz-j <jmunoz-j@student.42malaga.c      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/24 14:38:25 by jmunoz-j          #+#    #+#             */
-/*   Updated: 2026/09/25 09:35:54 by jmunoz-j         ###   ########.fr       */
+/*   Updated: 2026/09/29 15:49:25 by jmunoz-j         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	char *s;
+	char	*s;
 
 	s = ft_itoa(n);
 	ft_putstr_fd(s, fd);
